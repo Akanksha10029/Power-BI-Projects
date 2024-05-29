@@ -33,4 +33,6 @@ The scope of this project includes:
 - **Job Satisfaction Matrix**: Visualizing the relationship between job satisfaction ratings and attrition counts across job roles.
 - **Demographics**: Breakdown of attrition by age, gender, and other demographic factors.
 - **View Dashboard images below**
-- <img src=""> 
+- <img src="HR Analytics Dashboard project 1/Dashboard image1.jpg">
+- <img src="HR Analytics Dashboard project 1/Dashboard image 2.jpg">
+
