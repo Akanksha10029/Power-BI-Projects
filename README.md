@@ -37,4 +37,5 @@ The scope of this project includes:
 - <img src="HR Analytics Dashboard project 1/Dashboard image 2.jpg">
 
 **View in pdf for better clarity of dashboard image**
-[HR Analytics Dashboard Project](documents/HR_analytics_dashboard_project.pdf)
+[HR Analytics Dashboard Project](HR%20Analytics%20Dashboard%20project%201/HR%20analytics%20dashboard%20project.pdf)
+
