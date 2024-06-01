@@ -1,1 +1,4 @@
+In credit card table
+NEW COLUMNS:
+1. Revenue = 'ccdb cc_detail'[Annual_Fees] + 'ccdb cc_detail'[Interest_Earned] + 'ccdb cc_detail'[Total_Trans_Amt]
 
