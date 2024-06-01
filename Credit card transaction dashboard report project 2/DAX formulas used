@@ -26,3 +26,20 @@ In cc(credit card) detail table
 NEW COLUMNS:
 Revenue = 'ccdb cc_detail'[Annual_Fees] + 'ccdb cc_detail'[Interest_Earned] + 'ccdb cc_detail'[Total_Trans_Amt]
 
+KPIs or Measures:
+- WeekOverWeek Revenue = DIVIDE(([Current week Revenue]-[Previous week Revenue]),[Previous week Revenue])
+
+- Revenue = 'ccdb cc_detail'[Annual_Fees] + 'ccdb cc_detail'[Interest_Earned] + 'ccdb cc_detail'[Total_Trans_Amt]
+
+- Current week Revenue = CALCULATE(
+    SUM('ccdb cc_detail'[Revenue]),
+    FILTER(
+        ALL('ccdb cc_detail'),
+        'ccdb cc_detail'[Week Number]=MAX('ccdb cc_detail'[Week Number])))
+
+- Previous week Revenue = CALCULATE(
+    SUM('ccdb cc_detail'[Revenue]),
+    FILTER(
+        ALL('ccdb cc_detail'),
+        'ccdb cc_detail'[Week Number]=MAX('ccdb cc_detail'[Week Number])-1))
+
