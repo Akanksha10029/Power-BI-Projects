@@ -1,4 +1,28 @@
-In credit card table
+In cust detail table
 NEW COLUMNS:
-1. Revenue = 'ccdb cc_detail'[Annual_Fees] + 'ccdb cc_detail'[Interest_Earned] + 'ccdb cc_detail'[Total_Trans_Amt]
+1.Age group = SWITCH(
+    TRUE(),
+    'ccdb cust_detail'[Customer_Age] < 30, "less than 30",
+    'ccdb cust_detail'[Customer_Age] >= 30 && 'ccdb cust_detail'[Customer_Age] < 40, "30-40",
+    'ccdb cust_detail'[Customer_Age] >= 40 && 'ccdb cust_detail'[Customer_Age] < 50, "40-50",
+    'ccdb cust_detail'[Customer_Age] >= 50 && 'ccdb cust_detail'[Customer_Age] < 60, "50-60",
+    'ccdb cust_detail'[Customer_Age] >= 60, "60+",
+    "unknown"
+)
+
+2. Income Category = SWITCH(
+    TRUE(),
+    'ccdb cust_detail'[Income] < 30000, "Less than 30k",
+    'ccdb cust_detail'[Income] >= 30000 && 'ccdb cust_detail'[Income] < 40000, "30k - 40k",
+    'ccdb cust_detail'[Income] >= 40000 && 'ccdb cust_detail'[Income] < 50000, "40k - 50k",
+    'ccdb cust_detail'[Income] >= 50000 && 'ccdb cust_detail'[Income] < 60000, "50k - 60k",
+    'ccdb cust_detail'[Income] >= 60000 && 'ccdb cust_detail'[Income] < 75000, "60k - 75k",
+    'ccdb cust_detail'[Income] >= 75000, "75k and above",
+    "unknown"
+)
+
+
+In cc(credit card) detail table
+NEW COLUMNS:
+Revenue = 'ccdb cc_detail'[Annual_Fees] + 'ccdb cc_detail'[Interest_Earned] + 'ccdb cc_detail'[Total_Trans_Amt]
 
